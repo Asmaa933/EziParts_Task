@@ -1,0 +1,6 @@
+framework module Pods_EziParts_Task {
+  umbrella header "Pods-EziParts_Task-umbrella.h"
+
+  export *
+  module * { export * }
+}
