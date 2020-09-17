@@ -111,6 +111,7 @@
 				76C8EC8A2513FD21008CB27A /* Sources */,
 				76C8EC8B2513FD21008CB27A /* Frameworks */,
 				76C8EC8C2513FD21008CB27A /* Resources */,
+				2C883DE4574C32634E2654D7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +169,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2C883DE4574C32634E2654D7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EziParts_Task/Pods-EziParts_Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EziParts_Task/Pods-EziParts_Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EziParts_Task/Pods-EziParts_Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		75EC9ADC7B9E3194E0BF2066 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

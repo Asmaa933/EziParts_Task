@@ -6,5 +6,7 @@ target 'EziParts_Task' do
   use_frameworks!
 
   # Pods for EziParts_Task
+  pod 'SDWebImage'
+  pod 'Cosmos', '~> 22.1'
 
 end

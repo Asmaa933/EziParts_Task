@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: 2b82be5f114af34d8c87604da8a764430ff2dcfd
+PODS:
+  - Cosmos (22.1.0)
+  - SDWebImage (5.9.1):
+    - SDWebImage/Core (= 5.9.1)
+  - SDWebImage/Core (5.9.1)
+
+DEPENDENCIES:
+  - Cosmos (~> 22.1)
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
+  SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
+
+PODFILE CHECKSUM: 7e83d6970a1702d5b98a7abd2edd273d60b7eafd
 
 COCOAPODS: 1.9.3
