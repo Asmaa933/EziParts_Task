@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.2)
+  - CarbonKit (2.3.1)
   - Cosmos (22.1.0)
   - SDWebImage (5.9.1):
     - SDWebImage/Core (= 5.9.1)
@@ -7,20 +8,23 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
+  - CarbonKit
   - Cosmos (~> 22.1)
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - CarbonKit
     - Cosmos
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  CarbonKit: b60e24dbdb47179990d5e074efa87ab819c8de98
   Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
   SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
 
-PODFILE CHECKSUM: 0aceac44c6ff8fda11547a336eaabd0805dd768c
+PODFILE CHECKSUM: 381217c018732e4273d77d76286582119fa2222c
 
 COCOAPODS: 1.9.3

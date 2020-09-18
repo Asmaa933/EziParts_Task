@@ -9,5 +9,6 @@ target 'EziParts_Task' do
   pod 'SDWebImage'
   pod 'Cosmos', '~> 22.1'
   pod 'Alamofire', '~> 5.2'
+  pod 'CarbonKit'
 
 end
