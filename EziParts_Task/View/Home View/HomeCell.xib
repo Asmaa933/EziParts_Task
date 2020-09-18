@@ -96,14 +96,13 @@
                             <constraint firstItem="MdI-m0-osd" firstAttribute="leading" secondItem="dXb-Z2-TcZ" secondAttribute="leading" id="R2k-mz-BCg"/>
                             <constraint firstAttribute="trailing" secondItem="weA-oV-01r" secondAttribute="trailing" constant="12" id="VGe-B8-m2W"/>
                             <constraint firstItem="WbS-NC-QZB" firstAttribute="centerY" secondItem="MdI-m0-osd" secondAttribute="centerY" id="ZYu-mm-H3L"/>
-                            <constraint firstItem="weA-oV-01r" firstAttribute="width" secondItem="fjD-w5-iv6" secondAttribute="width" multiplier="0.25" id="Zi4-lh-QJ0"/>
                             <constraint firstItem="OC5-w0-bw2" firstAttribute="leading" secondItem="hsa-KK-glk" secondAttribute="trailing" constant="10" id="Zlb-Ug-5wi"/>
                             <constraint firstAttribute="bottom" secondItem="hsa-KK-glk" secondAttribute="bottom" constant="73" id="ZrT-3e-0LV"/>
                             <constraint firstItem="WbS-NC-QZB" firstAttribute="width" secondItem="fjD-w5-iv6" secondAttribute="width" multiplier="0.43125" id="fFg-OK-cKT"/>
                             <constraint firstItem="OC5-w0-bw2" firstAttribute="centerY" secondItem="hsa-KK-glk" secondAttribute="centerY" id="fIJ-uK-gBy"/>
                             <constraint firstAttribute="bottom" secondItem="iTZ-lh-BTv" secondAttribute="bottom" constant="18" id="flE-BK-5A3"/>
                             <constraint firstItem="hsa-KK-glk" firstAttribute="top" secondItem="dXb-Z2-TcZ" secondAttribute="bottom" constant="5" id="hZK-6H-w2Q"/>
-                            <constraint firstItem="dXb-Z2-TcZ" firstAttribute="width" secondItem="fjD-w5-iv6" secondAttribute="width" multiplier="0.65" id="jrx-VQ-0Hz"/>
+                            <constraint firstItem="dXb-Z2-TcZ" firstAttribute="width" secondItem="fjD-w5-iv6" secondAttribute="width" multiplier="0.4" id="jrx-VQ-0Hz"/>
                             <constraint firstItem="dXb-Z2-TcZ" firstAttribute="leading" secondItem="fjD-w5-iv6" secondAttribute="leading" constant="12" id="kry-dw-OHc"/>
                             <constraint firstItem="WbS-NC-QZB" firstAttribute="leading" secondItem="MdI-m0-osd" secondAttribute="trailing" constant="8" id="lEK-73-CcC"/>
                             <constraint firstAttribute="bottom" secondItem="MdI-m0-osd" secondAttribute="bottom" constant="20" id="nBw-pA-GXD"/>

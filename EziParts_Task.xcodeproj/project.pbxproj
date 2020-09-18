@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1A002C2FFA9DFB12F8B8D51F /* Pods_EziParts_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7BB5934F978334745E53DB /* Pods_EziParts_Task.framework */; };
+		7678F1D3251481A600A1D9B2 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678F1D2251481A600A1D9B2 /* NetworkHandler.swift */; };
+		7678F1D5251482E000A1D9B2 /* SuppliersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678F1D4251482E000A1D9B2 /* SuppliersModel.swift */; };
+		7678F1D72514890D00A1D9B2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678F1D62514890D00A1D9B2 /* HomeViewModel.swift */; };
+		7678F1DA2514921200A1D9B2 /* EmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678F1D92514921200A1D9B2 /* EmptyTableView.swift */; };
 		767F8E6425144D8E001AF6A1 /* ShadowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F8E6325144D8E001AF6A1 /* ShadowedButton.swift */; };
 		767F8E6625145437001AF6A1 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F8E6525145437001AF6A1 /* ShadowedView.swift */; };
 		76B6FF4A25145DCB00BFEACD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B6FF4825145DCB00BFEACD /* HomeCell.swift */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7678F1D2251481A600A1D9B2 /* NetworkHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkHandler.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Network/NetworkHandler.swift; sourceTree = "<group>"; };
+		7678F1D4251482E000A1D9B2 /* SuppliersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuppliersModel.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Model/SuppliersModel.swift; sourceTree = "<group>"; };
+		7678F1D62514890D00A1D9B2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/ViewModel/HomeViewModel.swift; sourceTree = "<group>"; };
+		7678F1D92514921200A1D9B2 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmptyTableView.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Helper/EmptyTableView.swift; sourceTree = "<group>"; };
 		767F8E6325144D8E001AF6A1 /* ShadowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowedButton.swift; path = ../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/CustomViews/ShadowedButton.swift; sourceTree = "<group>"; };
 		767F8E6525145437001AF6A1 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowedView.swift; path = ../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/CustomViews/ShadowedView.swift; sourceTree = "<group>"; };
 		76B6FF4825145DCB00BFEACD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Home View/HomeCell.swift"; sourceTree = "<group>"; };
@@ -56,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7678F1D82514920100A1D9B2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7678F1D92514921200A1D9B2 /* EmptyTableView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		76C8EC852513FD21008CB27A = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +93,7 @@
 		76C8EC902513FD21008CB27A /* EziParts_Task */ = {
 			isa = PBXGroup;
 			children = (
+				7678F1D82514920100A1D9B2 /* Helper */,
 				76C8ECAA25140030008CB27A /* Model */,
 				76C8ECA925140027008CB27A /* Network */,
 				76C8ECA82514001F008CB27A /* ViewModel */,
@@ -112,6 +129,7 @@
 		76C8ECA82514001F008CB27A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7678F1D62514890D00A1D9B2 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -119,6 +137,7 @@
 		76C8ECA925140027008CB27A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7678F1D2251481A600A1D9B2 /* NetworkHandler.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -126,6 +145,7 @@
 		76C8ECAA25140030008CB27A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7678F1D4251482E000A1D9B2 /* SuppliersModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -296,11 +316,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				76C8EC922513FD21008CB27A /* AppDelegate.swift in Sources */,
+				7678F1D72514890D00A1D9B2 /* HomeViewModel.swift in Sources */,
 				76C8EC942513FD21008CB27A /* SceneDelegate.swift in Sources */,
+				7678F1DA2514921200A1D9B2 /* EmptyTableView.swift in Sources */,
 				767F8E6425144D8E001AF6A1 /* ShadowedButton.swift in Sources */,
 				76C8ECB625140257008CB27A /* HomeViewController.swift in Sources */,
 				76B6FF4A25145DCB00BFEACD /* HomeCell.swift in Sources */,
 				767F8E6625145437001AF6A1 /* ShadowedView.swift in Sources */,
+				7678F1D3251481A600A1D9B2 /* NetworkHandler.swift in Sources */,
+				7678F1D5251482E000A1D9B2 /* SuppliersModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

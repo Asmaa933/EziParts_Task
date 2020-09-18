@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="EziParts" customModuleProvider="target">
             <connections>
+                <outlet property="activityInd" destination="Q1V-De-EbT" id="W6s-wc-CR5"/>
+                <outlet property="resultCount" destination="8ZM-YI-z2X" id="uvh-q8-Yzb"/>
                 <outlet property="searchBar" destination="Ndj-Tw-jor" id="gQu-QI-dqI"/>
                 <outlet property="tableView" destination="0je-AZ-XMe" id="Nbm-5O-t5Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -152,6 +154,9 @@
                     </constraints>
                     <state key="normal" image="sort"/>
                 </button>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Q1V-De-EbT">
+                    <rect key="frame" x="177.66666666666666" y="496.66666666666669" width="20" height="20.000000000000057"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
@@ -159,10 +164,12 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0je-AZ-XMe" secondAttribute="bottom" id="ECA-dx-xqw"/>
                 <constraint firstItem="KrR-3Y-ndp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="G9G-NN-9gT"/>
                 <constraint firstItem="KrR-3Y-ndp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KfM-Sw-m44"/>
+                <constraint firstItem="Q1V-De-EbT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MC9-yo-1ah"/>
                 <constraint firstItem="MKs-yy-ugg" firstAttribute="centerY" secondItem="8ZM-YI-z2X" secondAttribute="centerY" constant="5" id="NOg-Ff-kPe"/>
                 <constraint firstItem="0je-AZ-XMe" firstAttribute="top" secondItem="8ZM-YI-z2X" secondAttribute="bottom" constant="16" id="O5H-wZ-TD8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0je-AZ-XMe" secondAttribute="trailing" constant="20" id="PXY-IX-5mT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MKs-yy-ugg" secondAttribute="trailing" constant="25" id="QNL-vn-Jik"/>
+                <constraint firstItem="Q1V-De-EbT" firstAttribute="centerY" secondItem="0je-AZ-XMe" secondAttribute="centerY" id="ShV-cQ-D7F"/>
                 <constraint firstItem="KrR-3Y-ndp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WnF-pP-0xa"/>
                 <constraint firstItem="8ZM-YI-z2X" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="gZd-jc-ouC"/>
                 <constraint firstItem="KrR-3Y-ndp" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.183498" id="o9v-wl-1TQ"/>

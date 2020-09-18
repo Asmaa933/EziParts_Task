@@ -9,51 +9,80 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var resultCount: UILabel!
+    
+    @IBOutlet private weak var activityInd: UIActivityIndicatorView!
+    private var viewModel = HomeViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-setupTableView()
-        // Do any additional setup after loading the view.
-        for familyName in UIFont.familyNames {
-                  print("\n-- \(familyName) \n")
-                  for fontName in UIFont.fontNames(forFamilyName: familyName) {
-                      print(fontName)
-                  }
-              }
+        setupView()
+        viewModel.getSuppliers()
+        setupObservers()
     }
-    
+    func setupView() {
+        setupTableView()
+        resultCount.isHidden = true
+        activityInd.isHidden = false
+        activityInd.startAnimating()
+        
+        
+    }
     func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.isHidden = true
         let nibName = UINib(nibName: "HomeCell", bundle:nil)
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: NSNotification.Name(rawValue: "suppliers"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: NSNotification.Name(rawValue: "error"), object: nil)
     }
-    */
-
+    
+    @objc func errorRecieved(_ notification: Notification){
+        if let errorText = notification.userInfo?["error"] as? String {
+            print(errorText)
+        }
+    }
+    
+    @objc func reloadTableView(){
+        DispatchQueue.main.async {[weak self] in
+            guard let self = self else {return}
+            self.activityInd.stopAnimating()
+            self.activityInd.isHidden = true
+            self.tableView.reloadData()
+            self.tableView.isHidden = false
+            self.resultCount.isHidden = false
+            self.resultCount.text = "\(self.viewModel.getSuppliersArrCount() ?? 0) results"
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        let count = viewModel.getSuppliersArrCount() ?? 0
+        if count == 0{
+            tableView.setEmptyView(title: "", message: "No Suppliers Found", messageImage: #imageLiteral(resourceName: "close"))
+        }else{
+            tableView.restore()
+        }
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeCell else {return UITableViewCell()}
+        let suppliers = viewModel.getSupplierData(indexPath: indexPath)
+        cell.configureCell(suppliers: suppliers)
         return cell
     }
     
