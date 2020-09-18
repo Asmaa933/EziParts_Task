@@ -9,13 +9,14 @@
 import UIKit
 
 class ShadowedView: UIView {
+    
+    
         
         override func awakeFromNib() {
             super.awakeFromNib()
             setupview()
         }
         private func setupview(){
-            self.backgroundColor = .white
             self.clipsToBounds = true
             self.layer.shadowColor = #colorLiteral(red: 0.4784313725, green: 0.4784313725, blue: 0.5098039216, alpha: 1)
             self.layer.shadowOffset = CGSize(width: 0, height: 2)

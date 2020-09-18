@@ -117,7 +117,7 @@
                             <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                         </searchBar>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="Pwf-9e-asm" firstAttribute="leading" secondItem="Ndj-Tw-jor" secondAttribute="trailing" constant="5" id="05G-bT-VXL"/>
                         <constraint firstItem="Ndj-Tw-jor" firstAttribute="centerY" secondItem="QTR-et-huF" secondAttribute="centerY" id="76h-p4-jkK"/>
@@ -141,7 +141,7 @@
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0je-AZ-XMe">
                     <rect key="frame" x="20" y="235" width="335" height="543"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKs-yy-ugg" customClass="ShadowedButton" customModule="EziParts" customModuleProvider="target">
                     <rect key="frame" x="315" y="196.33333333333334" width="35" height="35"/>
