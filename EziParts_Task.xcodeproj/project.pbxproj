@@ -18,6 +18,8 @@
 		76B6FF4B25145DCB00BFEACD /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B6FF4925145DCB00BFEACD /* HomeCell.xib */; };
 		76C4C7B92515442B00788E98 /* Helping Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4C7B82515442B00788E98 /* Helping Methods.swift */; };
 		76C4C7BB251546F600788E98 /* searchCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4C7BA251546F600788E98 /* searchCategoryButton.swift */; };
+		76C4C7BD25154C9A00788E98 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4C7BC25154C9A00788E98 /* Constants.swift */; };
+		76C4C7BF25154FE700788E98 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4C7BE25154FE700788E98 /* Reachability.swift */; };
 		76C8EC922513FD21008CB27A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8EC912513FD21008CB27A /* AppDelegate.swift */; };
 		76C8EC942513FD21008CB27A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8EC932513FD21008CB27A /* SceneDelegate.swift */; };
 		76C8EC992513FD21008CB27A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C8EC972513FD21008CB27A /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		76B6FF4925145DCB00BFEACD /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeCell.xib; path = "../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Home View/HomeCell.xib"; sourceTree = "<group>"; };
 		76C4C7B82515442B00788E98 /* Helping Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Helping Methods.swift"; path = "../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Helper/Helping Methods.swift"; sourceTree = "<group>"; };
 		76C4C7BA251546F600788E98 /* searchCategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = searchCategoryButton.swift; path = ../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/CustomViews/searchCategoryButton.swift; sourceTree = "<group>"; };
+		76C4C7BC25154C9A00788E98 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Helper/Constants.swift; sourceTree = "<group>"; };
+		76C4C7BE25154FE700788E98 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		76C8EC8E2513FD21008CB27A /* EziParts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EziParts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C8EC912513FD21008CB27A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C8EC932513FD21008CB27A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			children = (
 				7678F1D92514921200A1D9B2 /* EmptyTableView.swift */,
 				76C4C7B82515442B00788E98 /* Helping Methods.swift */,
+				76C4C7BC25154C9A00788E98 /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				7678F1D2251481A600A1D9B2 /* NetworkHandler.swift */,
+				76C4C7BE25154FE700788E98 /* Reachability.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C4C7BF25154FE700788E98 /* Reachability.swift in Sources */,
 				76C8EC922513FD21008CB27A /* AppDelegate.swift in Sources */,
 				7678F1D72514890D00A1D9B2 /* HomeViewModel.swift in Sources */,
 				76C4C7B92515442B00788E98 /* Helping Methods.swift in Sources */,
@@ -328,6 +335,7 @@
 				7678F1DA2514921200A1D9B2 /* EmptyTableView.swift in Sources */,
 				76C4C7BB251546F600788E98 /* searchCategoryButton.swift in Sources */,
 				767F8E6425144D8E001AF6A1 /* ShadowedButton.swift in Sources */,
+				76C4C7BD25154C9A00788E98 /* Constants.swift in Sources */,
 				76C8ECB625140257008CB27A /* HomeViewController.swift in Sources */,
 				76B6FF4A25145DCB00BFEACD /* HomeCell.swift in Sources */,
 				767F8E6625145437001AF6A1 /* ShadowedView.swift in Sources */,

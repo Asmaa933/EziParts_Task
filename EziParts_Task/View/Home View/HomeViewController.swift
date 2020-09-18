@@ -10,26 +10,32 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var noInternetImg: UIImageView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var resultCount: UILabel!
     
     private  var activityInd = UIActivityIndicatorView ()
-    private var viewModel = HomeViewModel()
+    lazy var viewModel: HomeViewModel = {
+        return HomeViewModel()
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        viewModel.getSuppliers()
-        setupObservers()
-    }
-    func setupView() {
-        setupTableView()
-        resultCount.isHidden = true
-        activityInd = showActivityIndicator(view: view)
-        
+        initVM()
     }
     
-    func setupTableView(){
+   private func setupView() {
+        setupTableView()
+        resultCount.isHidden = true
+        noInternetImg.isHidden = true
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(HomeViewController.gestureRecognizer))
+        downSwipe.direction = UISwipeGestureRecognizer.Direction.down
+        self.view.addGestureRecognizer(downSwipe)
+    }
+    
+   private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         tableView.isHidden = true
@@ -37,32 +43,68 @@ class HomeViewController: UIViewController {
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
     }
     
-    func setupObservers(){
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: NSNotification.Name(rawValue: "suppliers"), object: nil)
+   private func initVM(){
         
-        NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: NSNotification.Name(rawValue: "error"), object: nil)
-    }
-    
-    @objc func errorRecieved(_ notification: Notification){
-        if let errorText = notification.userInfo?["error"] as? String {
-            print(errorText)
-        }
-    }
-    
-    @objc func reloadTableView(){
-        DispatchQueue.main.async {[weak self] in
+        viewModel.updateUIClosure = { [weak self] () in
             guard let self = self else {return}
-            removeActivityIndicator(activityIndicator: self.activityInd)
-            self.tableView.reloadData()
-            self.tableView.isHidden = false
-            self.resultCount.isHidden = false
-            self.resultCount.text = "\(self.viewModel.getSuppliersArrCount() ?? 0) results"
+            DispatchQueue.main.async {
+                self.tableView.isHidden = false
+                self.tableView.reloadData()
+                self.resultCount.isHidden = false
+                self.resultCount.text = "\(self.viewModel.getSuppliersArrCount() ?? 0) results"
+            }
         }
+        
+        viewModel.showAlertClosure = { [weak self] () in
+            DispatchQueue.main.async {
+                if let message = self?.viewModel.alertMessage {
+                    if message == "Check Internet Connection"{
+                        self?.noInternetImg.isHidden = false
+                    }else{ self?.noInternetImg.isHidden = true
+                        self?.showAlert(message)
+                        
+                    }
+                }
+            }
+        }
+        
+        viewModel.updateLoadingStatus = { [weak self] () in
+            guard let self = self else {
+                return
+            }
+            
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                switch self.viewModel.state {
+                case .empty, .error:
+                    removeActivityIndicator(activityIndicator: self.activityInd)
+                    self.tableView.alpha = 0.0
+                    
+                case .loading:
+                    self.activityInd  = showActivityIndicator(view: self.view)
+                    self.tableView.alpha = 0.0
+                    
+                case .populated:
+                    removeActivityIndicator(activityIndicator: self.activityInd)
+                    self.tableView.alpha = 1.0
+                }
+            }
+        }
+        
+        viewModel.getSuppliers()
+        
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
+    private func showAlert(_ message: String){
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc private func gestureRecognizer(){
+       viewModel.getSuppliers()
     }
 }
 
@@ -86,8 +128,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+      //to do
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }

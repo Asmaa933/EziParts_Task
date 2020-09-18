@@ -9,16 +9,52 @@
 import Foundation
 
 class HomeViewModel{
-    private var suppliers: SuppliersModel?
+    
+    private let apiService: ApiHandlerProtocol
+    var updateUIClosure: (()->())?
+    var showAlertClosure: (()->())?
+    var updateLoadingStatus: (()->())?
+    
+    private var suppliers: SuppliersModel?{
+        didSet{
+            self.updateUIClosure?()
+        }
+    }
+    
+    var alertMessage: String? {
+        didSet {
+            self.showAlertClosure?()
+        }
+    }
+    var state: State = .empty {
+        didSet {
+            self.updateLoadingStatus?()
+        }
+    }
+    
+    init(apiService: ApiHandlerProtocol = ApiHandler()) {
+        self.apiService = apiService
+    }
     
     func getSuppliers() {
-        NetworkHandler.instance.getSuppliers({[weak self](suppliersData) in
+        state = .loading
+        if ReachabilityManager.isConnectedToNetwork(){
+            getSuppliersFromApi()
+        }else{
+            alertMessage = "Check Internet Connection"
+            state = .error
+        }
+    }
+    
+    private func getSuppliersFromApi(){
+        apiService.getSuppliers({[weak self](suppliersData) in
             if suppliersData != nil{
                 self?.suppliers = suppliersData!
-                self?.reloadTableView()
+                self?.state = .populated
             }
         }) {[weak self] (error) in
-            self?.showError(error: error)
+            self?.alertMessage = error
+            self?.state = .error
         }
     }
     
@@ -30,15 +66,4 @@ class HomeViewModel{
         return suppliers?.results[indexPath.row]
     }
     
-    private func reloadTableView(){
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "suppliers"), object: nil)
-        
-    }
-    private func showError(error: String){
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "error"), object: nil, userInfo: ["error" : error])
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
 }
