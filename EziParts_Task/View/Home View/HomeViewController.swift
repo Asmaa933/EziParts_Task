@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var resultCount: UILabel!
     
-    @IBOutlet private weak var activityInd: UIActivityIndicatorView!
+    private  var activityInd = UIActivityIndicatorView ()
     private var viewModel = HomeViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,10 @@ class HomeViewController: UIViewController {
     func setupView() {
         setupTableView()
         resultCount.isHidden = true
-        activityInd.isHidden = false
-        activityInd.startAnimating()
-        
+        activityInd = showActivityIndicator(view: view)
         
     }
+    
     func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
@@ -37,6 +36,7 @@ class HomeViewController: UIViewController {
         let nibName = UINib(nibName: "HomeCell", bundle:nil)
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
     }
+    
     func setupObservers(){
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTableView), name: NSNotification.Name(rawValue: "suppliers"), object: nil)
         
@@ -52,8 +52,7 @@ class HomeViewController: UIViewController {
     @objc func reloadTableView(){
         DispatchQueue.main.async {[weak self] in
             guard let self = self else {return}
-            self.activityInd.stopAnimating()
-            self.activityInd.isHidden = true
+            removeActivityIndicator(activityIndicator: self.activityInd)
             self.tableView.reloadData()
             self.tableView.isHidden = false
             self.resultCount.isHidden = false
