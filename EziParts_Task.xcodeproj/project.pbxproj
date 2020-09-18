@@ -3,28 +3,42 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1A002C2FFA9DFB12F8B8D51F /* Pods_EziParts_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7BB5934F978334745E53DB /* Pods_EziParts_Task.framework */; };
+		767F8E6425144D8E001AF6A1 /* ShadowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F8E6325144D8E001AF6A1 /* ShadowedButton.swift */; };
+		767F8E6625145437001AF6A1 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F8E6525145437001AF6A1 /* ShadowedView.swift */; };
+		76B6FF4A25145DCB00BFEACD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B6FF4825145DCB00BFEACD /* HomeCell.swift */; };
+		76B6FF4B25145DCB00BFEACD /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B6FF4925145DCB00BFEACD /* HomeCell.xib */; };
 		76C8EC922513FD21008CB27A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8EC912513FD21008CB27A /* AppDelegate.swift */; };
 		76C8EC942513FD21008CB27A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8EC932513FD21008CB27A /* SceneDelegate.swift */; };
-		76C8EC962513FD21008CB27A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8EC952513FD21008CB27A /* ViewController.swift */; };
 		76C8EC992513FD21008CB27A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C8EC972513FD21008CB27A /* Main.storyboard */; };
 		76C8EC9B2513FD23008CB27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C8EC9A2513FD23008CB27A /* Assets.xcassets */; };
 		76C8EC9E2513FD23008CB27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C8EC9C2513FD23008CB27A /* LaunchScreen.storyboard */; };
+		76C8ECB2251401EC008CB27A /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C8ECB0251401EC008CB27A /* Poppins-Regular.ttf */; };
+		76C8ECB3251401EC008CB27A /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C8ECB1251401EC008CB27A /* Poppins-Medium.ttf */; };
+		76C8ECB625140257008CB27A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8ECB425140257008CB27A /* HomeViewController.swift */; };
+		76C8ECB725140257008CB27A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C8ECB525140257008CB27A /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		767F8E6325144D8E001AF6A1 /* ShadowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowedButton.swift; path = ../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/CustomViews/ShadowedButton.swift; sourceTree = "<group>"; };
+		767F8E6525145437001AF6A1 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowedView.swift; path = ../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/CustomViews/ShadowedView.swift; sourceTree = "<group>"; };
+		76B6FF4825145DCB00BFEACD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Home View/HomeCell.swift"; sourceTree = "<group>"; };
+		76B6FF4925145DCB00BFEACD /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HomeCell.xib; path = "../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Home View/HomeCell.xib"; sourceTree = "<group>"; };
 		76C8EC8E2513FD21008CB27A /* EziParts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EziParts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C8EC912513FD21008CB27A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C8EC932513FD21008CB27A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76C8EC952513FD21008CB27A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		76C8EC982513FD21008CB27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76C8EC9A2513FD23008CB27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76C8EC9D2513FD23008CB27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76C8EC9F2513FD23008CB27A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76C8ECB0251401EC008CB27A /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		76C8ECB1251401EC008CB27A /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		76C8ECB425140257008CB27A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		76C8ECB525140257008CB27A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		AA7BB5934F978334745E53DB /* Pods_EziParts_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EziParts_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E046475FD71BDF0103253143 /* Pods-EziParts_Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EziParts_Task.release.xcconfig"; path = "Target Support Files/Pods-EziParts_Task/Pods-EziParts_Task.release.xcconfig"; sourceTree = "<group>"; };
 		FC5E4AE158C8411984691769 /* Pods-EziParts_Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EziParts_Task.debug.xcconfig"; path = "Target Support Files/Pods-EziParts_Task/Pods-EziParts_Task.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,8 +77,11 @@
 		76C8EC902513FD21008CB27A /* EziParts_Task */ = {
 			isa = PBXGroup;
 			children = (
+				76C8ECAA25140030008CB27A /* Model */,
+				76C8ECA925140027008CB27A /* Network */,
+				76C8ECA82514001F008CB27A /* ViewModel */,
+				76C8ECA725140016008CB27A /* View */,
 				76C8ECA52513FDE1008CB27A /* Supporting Files */,
-				76C8EC952513FD21008CB27A /* ViewController.swift */,
 				76C8EC9F2513FD23008CB27A /* Info.plist */,
 			);
 			path = EziParts_Task;
@@ -73,6 +90,7 @@
 		76C8ECA52513FDE1008CB27A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				76C8ECAF2514015B008CB27A /* Fonts */,
 				76C8EC912513FD21008CB27A /* AppDelegate.swift */,
 				76C8EC932513FD21008CB27A /* SceneDelegate.swift */,
 				76C8EC972513FD21008CB27A /* Main.storyboard */,
@@ -80,6 +98,65 @@
 				76C8EC9C2513FD23008CB27A /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76C8ECA725140016008CB27A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				76C8ECB9251405EA008CB27A /* CustomViews */,
+				76C8ECB82514025E008CB27A /* Home View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		76C8ECA82514001F008CB27A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		76C8ECA925140027008CB27A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		76C8ECAA25140030008CB27A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76C8ECAF2514015B008CB27A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				76C8ECB1251401EC008CB27A /* Poppins-Medium.ttf */,
+				76C8ECB0251401EC008CB27A /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		76C8ECB82514025E008CB27A /* Home View */ = {
+			isa = PBXGroup;
+			children = (
+				76C8ECB425140257008CB27A /* HomeViewController.swift */,
+				76C8ECB525140257008CB27A /* HomeViewController.xib */,
+				76B6FF4825145DCB00BFEACD /* HomeCell.swift */,
+				76B6FF4925145DCB00BFEACD /* HomeCell.xib */,
+			);
+			path = "Home View";
+			sourceTree = "<group>";
+		};
+		76C8ECB9251405EA008CB27A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				767F8E6325144D8E001AF6A1 /* ShadowedButton.swift */,
+				767F8E6525145437001AF6A1 /* ShadowedView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		88B8F7BC8F7E5498F9369BD5 /* Frameworks */ = {
@@ -96,7 +173,6 @@
 				FC5E4AE158C8411984691769 /* Pods-EziParts_Task.debug.xcconfig */,
 				E046475FD71BDF0103253143 /* Pods-EziParts_Task.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -160,9 +236,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B6FF4B25145DCB00BFEACD /* HomeCell.xib in Resources */,
 				76C8EC9E2513FD23008CB27A /* LaunchScreen.storyboard in Resources */,
 				76C8EC9B2513FD23008CB27A /* Assets.xcassets in Resources */,
 				76C8EC992513FD21008CB27A /* Main.storyboard in Resources */,
+				76C8ECB3251401EC008CB27A /* Poppins-Medium.ttf in Resources */,
+				76C8ECB2251401EC008CB27A /* Poppins-Regular.ttf in Resources */,
+				76C8ECB725140257008CB27A /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76C8EC962513FD21008CB27A /* ViewController.swift in Sources */,
 				76C8EC922513FD21008CB27A /* AppDelegate.swift in Sources */,
 				76C8EC942513FD21008CB27A /* SceneDelegate.swift in Sources */,
+				767F8E6425144D8E001AF6A1 /* ShadowedButton.swift in Sources */,
+				76C8ECB625140257008CB27A /* HomeViewController.swift in Sources */,
+				76B6FF4A25145DCB00BFEACD /* HomeCell.swift in Sources */,
+				767F8E6625145437001AF6A1 /* ShadowedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
