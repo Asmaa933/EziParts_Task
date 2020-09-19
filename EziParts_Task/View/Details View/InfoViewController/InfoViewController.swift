@@ -9,7 +9,9 @@
 import UIKit
 
 class InfoViewController: UIViewController {
-
+    lazy var viewModel: DetailsViewModel = {
+             return DetailsViewModel()
+         }()
     override func viewDidLoad() {
         super.viewDidLoad()
 

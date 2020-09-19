@@ -11,6 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="EziParts" customModuleProvider="target">
             <connections>
                 <outlet property="carbonView" destination="gyv-aJ-Bgq" id="1ep-Hu-Mlj"/>
+                <outlet property="companyName" destination="x1M-0E-fi7" id="9Yr-AQ-FzG"/>
+                <outlet property="logoImg" destination="cjx-dF-FWO" id="GQw-91-5Gb"/>
+                <outlet property="rateView" destination="wLX-aL-dqw" id="Xob-tW-aBZ"/>
+                <outlet property="shadowView" destination="CpQ-Zm-BNr" id="2Bf-4m-zOt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +36,9 @@
                                 <constraint firstAttribute="height" constant="50" id="zd3-io-zVG"/>
                             </constraints>
                             <state key="normal" image="close"/>
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="-1" eventType="touchUpInside" id="Z4n-aH-z9N"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOz-7y-k4d">
                             <rect key="frame" x="359" y="37.5" width="35" height="35"/>
@@ -55,8 +62,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpQ-Zm-BNr" customClass="ShadowedView" customModule="EziParts" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="174" width="414" height="688"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cjx-dF-FWO" customClass="CircularImage" customModule="EziParts" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cjx-dF-FWO" customClass="CircularImage" customModule="EziParts" customModuleProvider="target">
                             <rect key="frame" x="167" y="-30" width="80" height="80"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="Vej-kl-7iI"/>
                                 <constraint firstAttribute="height" constant="80" id="a9N-8Y-xHt"/>
@@ -68,9 +76,9 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-aL-dqw">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLX-aL-dqw" customClass="CosmosView" customModule="Cosmos">
                             <rect key="frame" x="149" y="78.5" width="116" height="12.5"/>
-                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                     <real key="value" value="4"/>
@@ -101,14 +109,23 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiU-7y-tQi">
                                     <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                     <state key="normal" image="facebook"/>
+                                    <connections>
+                                        <action selector="socialMediaButtonsPressed:" destination="-1" eventType="touchUpInside" id="lQA-XO-khj"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-Dn-Zud">
                                     <rect key="frame" x="33" y="0.0" width="25" height="25"/>
                                     <state key="normal" image="instagram"/>
+                                    <connections>
+                                        <action selector="socialMediaButtonsPressed:" destination="-1" eventType="touchUpInside" id="3mc-JE-lbo"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0s-sP-Tem">
                                     <rect key="frame" x="66" y="0.0" width="25" height="25"/>
                                     <state key="normal" image="twitter"/>
+                                    <connections>
+                                        <action selector="socialMediaButtonsPressed:" destination="-1" eventType="touchUpInside" id="nEH-YS-8Vl"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

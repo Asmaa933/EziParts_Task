@@ -7,3 +7,36 @@
 //
 
 import Foundation
+
+class DetailsViewModel{
+    private let apiService: SupplierDetailsApiHandlerProtocol
+    var updateUIClosure: (()->())?
+       var showAlertClosure: (()->())?
+       var updateLoadingStatus: (()->())?
+    init(apiService: SupplierDetailsApiHandlerProtocol = SupplierDetailsApiHandler()) {
+         self.apiService = apiService
+     }
+    var supplierDetails: SupplierDetails?{
+        didSet{
+            updateUIClosure?()
+        }
+    }
+    
+    var errorMessage: String?{
+        didSet{
+            showAlertClosure?()
+        }
+    }
+    
+    func getSupplierDetails(slug: String){
+        apiService.getSupplierDetail(supplierSlug: slug, {[weak self] (supplier) in
+            if supplier != nil{
+                self?.supplierDetails = supplier!
+            }
+        }) {[weak self] (error) in
+            self?.errorMessage = error
+        }
+    }
+    
+    
+}

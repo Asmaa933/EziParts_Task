@@ -10,22 +10,21 @@ import Foundation
 
 // MARK: - SupplierDetails
 struct SupplierDetails: Codable {
-    let status: Statuss
-    let results: Results
+    let status: Statuss?
+    let results: Results?
 }
 
 // MARK: - Results
 struct Results: Codable {
-    let id: Int
-    let companyPhone, companyName, companyEmail: String
-    let location: [Location]
-    let logo: String
-    let about, building, address, facebook: String
-    let instagram, twitter, slug: String
-    let addressDetails: String
-    let favorite, reviewsCount: Int
-    let reviewsAvg: String
-    let reviews: [Review]
+    let id: Int?
+    let companyPhone, companyName, companyEmail: String?
+    let location: [Location]?
+    let logo: String?
+    let about, building, address, facebook: String?
+    let instagram, twitter, slug, addressDetails: String?
+    let favorite, reviewsCount: Int?
+    let reviewsAvg: String?
+    let reviews: [Review]?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -43,13 +42,13 @@ struct Results: Codable {
 
 // MARK: - Location
 struct Location: Codable {
-    let lat, lng: String
+    let lat, lng: String?
 }
 
 // MARK: - Review
 struct Review: Codable {
-    let id: Int
-    let rating, details, createdAt, user: String
+    let id: Int?
+    let rating, details, createdAt, user: String?
 
     enum CodingKeys: String, CodingKey {
         case id, rating, details
@@ -60,6 +59,6 @@ struct Review: Codable {
 
 // MARK: - Status
 struct Statuss: Codable {
-    let code: Int
-    let message: String
+    let code: Int?
+    let message: String?
 }

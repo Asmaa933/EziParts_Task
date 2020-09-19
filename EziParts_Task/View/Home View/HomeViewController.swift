@@ -130,6 +130,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let detail = DetailsViewController()
         detail.modalPresentationStyle = .fullScreen
+        let supplier = viewModel.getSupplierData(indexPath: indexPath)
+        detail.supplierSlug = supplier?.slug
         self.present(detail, animated: true, completion: nil)
     }
     
