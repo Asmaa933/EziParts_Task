@@ -22,7 +22,7 @@ class ShadowedButton: UIButton {
         self.layer.shadowOpacity = 0.5
         self.layer.shadowRadius = 2
         self.layer.masksToBounds = false
-        
+        self.titleLabel?.font = UIFont(name: "Poppins-Medium", size: 12)
     }
     override func prepareForInterfaceBuilder() {
         setupview()

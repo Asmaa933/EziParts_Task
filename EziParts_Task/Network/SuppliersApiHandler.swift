@@ -9,12 +9,12 @@
 import Foundation
 import Alamofire
 
-protocol ApiHandlerProtocol {
+protocol SuppliersApiHandlerProtocol {
     func getSuppliers(_ completion: @escaping (_ suppliers: SuppliersModel?) -> Void, _ errorCompletion: @escaping (_ error: String) -> Void)
     
 }
 
-class ApiHandler: ApiHandlerProtocol{
+class SuppliersApiHandler: SuppliersApiHandlerProtocol{
     func getSuppliers(_ completion: @escaping (_ suppliers: SuppliersModel?) -> Void, _ errorCompletion: @escaping (_ error: String) -> Void){
         let supplierUrl = "http://eziparts.innsandbox.com/api/list/suppliers"
         guard let url = URL(string: supplierUrl) else{return}

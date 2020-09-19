@@ -10,7 +10,7 @@ import Foundation
 
 class HomeViewModel{
     
-    private let apiService: ApiHandlerProtocol
+    private let apiService: SuppliersApiHandlerProtocol
     var updateUIClosure: (()->())?
     var showAlertClosure: (()->())?
     var updateLoadingStatus: (()->())?
@@ -32,7 +32,7 @@ class HomeViewModel{
         }
     }
     
-    init(apiService: ApiHandlerProtocol = ApiHandler()) {
+    init(apiService: SuppliersApiHandlerProtocol = SuppliersApiHandler()) {
         self.apiService = apiService
     }
     

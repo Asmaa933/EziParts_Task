@@ -23,3 +23,4 @@ func removeActivityIndicator(activityIndicator: UIActivityIndicatorView){
     activityIndicator.removeFromSuperview()
     
 }
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReviewCell" rowHeight="130" id="KGk-i7-Jjw" customClass="ReviewCell" customModule="EziParts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53o-oq-yD4" customClass="ShadowedView" customModule="EziParts" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merolla Safwat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8F-3a-YTc">
+                                <rect key="frame" x="10" y="15" width="113" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrK-1k-DoT">
+                                <rect key="frame" x="214" y="20.5" width="96" height="10"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                        <color key="value" red="0.85490196080000003" green="0.87058823529999996" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                        <color key="value" red="0.85490196080000003" green="0.87058823529999996" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                        <color key="value" red="1" green="0.85098039219999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starMargin">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 Apr 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GY-ZJ-L69">
+                                <rect key="frame" x="10" y="41" width="65" height="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0C-FL-xPm">
+                                <rect key="frame" x="10" y="60" width="300" height="62"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do </string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MrK-1k-DoT" firstAttribute="centerY" secondItem="r8F-3a-YTc" secondAttribute="centerY" id="2eC-g7-M4g"/>
+                            <constraint firstItem="X0C-FL-xPm" firstAttribute="top" secondItem="6GY-ZJ-L69" secondAttribute="bottom" constant="5" id="3qZ-O6-chn"/>
+                            <constraint firstItem="6GY-ZJ-L69" firstAttribute="top" secondItem="r8F-3a-YTc" secondAttribute="bottom" constant="5" id="7Of-wT-UjQ"/>
+                            <constraint firstItem="MrK-1k-DoT" firstAttribute="height" secondItem="53o-oq-yD4" secondAttribute="width" multiplier="0.03" id="Jfl-ku-6Xc"/>
+                            <constraint firstAttribute="bottom" secondItem="X0C-FL-xPm" secondAttribute="bottom" constant="8" id="OrB-1s-U0h"/>
+                            <constraint firstAttribute="trailing" secondItem="MrK-1k-DoT" secondAttribute="trailing" constant="10" id="bIf-1Z-A1h"/>
+                            <constraint firstItem="X0C-FL-xPm" firstAttribute="leading" secondItem="53o-oq-yD4" secondAttribute="leading" constant="10" id="esi-EA-PGM"/>
+                            <constraint firstItem="6GY-ZJ-L69" firstAttribute="leading" secondItem="53o-oq-yD4" secondAttribute="leading" constant="10" id="fxv-Fv-9WK"/>
+                            <constraint firstItem="r8F-3a-YTc" firstAttribute="top" secondItem="53o-oq-yD4" secondAttribute="top" constant="15" id="oSm-Ir-oJp"/>
+                            <constraint firstItem="MrK-1k-DoT" firstAttribute="width" secondItem="53o-oq-yD4" secondAttribute="width" multiplier="0.3" id="oq0-D1-RDj"/>
+                            <constraint firstAttribute="trailing" secondItem="X0C-FL-xPm" secondAttribute="trailing" constant="10" id="wLZ-65-IxV"/>
+                            <constraint firstItem="r8F-3a-YTc" firstAttribute="leading" secondItem="53o-oq-yD4" secondAttribute="leading" constant="10" id="zFy-n9-bwJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="53o-oq-yD4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1sl-uf-lHZ"/>
+                    <constraint firstAttribute="trailing" secondItem="53o-oq-yD4" secondAttribute="trailing" id="YXj-IZ-VE6"/>
+                    <constraint firstItem="53o-oq-yD4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b7C-G8-pZn"/>
+                    <constraint firstAttribute="bottom" secondItem="53o-oq-yD4" secondAttribute="bottom" id="eoK-KU-UBo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLbl" destination="6GY-ZJ-L69" id="ZGi-Zf-cgb"/>
+                <outlet property="rateView" destination="MrK-1k-DoT" id="Udj-9F-B2I"/>
+                <outlet property="reviewDetails" destination="X0C-FL-xPm" id="ALv-cW-zhY"/>
+                <outlet property="userName" destination="r8F-3a-YTc" id="Kkb-G8-dRF"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="119.53125"/>
+        </tableViewCell>
+    </objects>
+</document>
