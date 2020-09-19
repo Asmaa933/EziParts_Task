@@ -26,9 +26,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrK-1k-DoT">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrK-1k-DoT" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="214" y="20.5" width="96" height="10"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rating">
                                         <real key="value" value="4"/>
@@ -95,7 +95,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLbl" destination="6GY-ZJ-L69" id="ZGi-Zf-cgb"/>
-                <outlet property="rateView" destination="MrK-1k-DoT" id="Udj-9F-B2I"/>
+                <outlet property="rateView" destination="MrK-1k-DoT" id="CX7-no-24c"/>
                 <outlet property="reviewDetails" destination="X0C-FL-xPm" id="ALv-cW-zhY"/>
                 <outlet property="userName" destination="r8F-3a-YTc" id="Kkb-G8-dRF"/>
             </connections>

@@ -10,6 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoViewController" customModule="EziParts" customModuleProvider="target">
             <connections>
+                <outlet property="aboutTextView" destination="4eS-qC-SaJ" id="EHT-nB-goJ"/>
+                <outlet property="aboutUSLbl" destination="Jd1-RN-PJ0" id="bjP-j2-5R0"/>
+                <outlet property="contactUsLbl" destination="Mrk-of-2rr" id="wR0-qv-HRC"/>
+                <outlet property="emailLbl" destination="49y-cW-qRv" id="gb8-F0-g0c"/>
+                <outlet property="locationLbl" destination="SkZ-9S-hog" id="6r6-zf-Byx"/>
+                <outlet property="mapImage" destination="4zl-hs-v4S" id="W7B-EW-LjL"/>
+                <outlet property="phoneLbl" destination="O8T-ui-Ivc" id="zPS-K4-8Ie"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

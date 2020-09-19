@@ -29,7 +29,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Thahabi" translatesAutoresizingMaskIntoConstraints="NO" id="XJm-rA-Jhw">
                                 <rect key="frame" x="250" y="6.5" width="54" height="29"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-fC-U1u" customClass="CosmosView" customModule="Cosmos">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uh-fC-U1u" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="12" y="38" width="90.5" height="9.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -131,6 +131,6 @@
     <resources>
         <image name="Thahabi" width="70" height="20.5"/>
         <image name="fav" width="35" height="35"/>
-        <image name="location" width="20" height="20"/>
+        <image name="location" width="25" height="25"/>
     </resources>
 </document>

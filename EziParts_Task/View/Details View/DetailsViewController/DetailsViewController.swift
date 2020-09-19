@@ -24,11 +24,14 @@ class DetailsViewController: UIViewController {
     lazy var viewModel: DetailsViewModel = {
         return DetailsViewModel()
     }()
+     var infoVC = InfoViewController()
+     var reviewVC = ReviewsViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         initViewModel()
+
     }
     
     private func setupView(){
@@ -56,6 +59,7 @@ class DetailsViewController: UIViewController {
         viewModel.updateUIClosure = { [weak self] () in
             guard let self = self else {return}
             guard let details = self.viewModel.supplierDetails?.results else {return}
+            self.infoVC.infoDetails = details
             DispatchQueue.main.async {
                 self.companyName.text = details.companyName
                 self.logoImg.sd_setImage(with: URL(string: details.logo ?? "") , placeholderImage: #imageLiteral(resourceName: "logo"), completed: nil)
@@ -76,9 +80,6 @@ class DetailsViewController: UIViewController {
             }
         
         viewModel.getSupplierDetails(slug: supplierSlug ?? "")
-        
-        
-        
         
     }
     
@@ -113,13 +114,13 @@ extension DetailsViewController: CarbonTabSwipeNavigationDelegate{
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
         switch index {
         case 0:
-            return InfoViewController()
+            return infoVC
             
         case 1:
-            return ReviewsViewController()
+            return reviewVC
             
         default:
-            return InfoViewController()
+            return infoVC 
             
         }
         

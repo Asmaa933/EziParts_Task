@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Cosmos
 
 class ReviewCell: UITableViewCell {
     @IBOutlet weak var userName: UILabel!
     
-    @IBOutlet weak var rateView: UIView!
+   
+    @IBOutlet weak var rateView: CosmosView!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var reviewDetails: UITextView!
     
