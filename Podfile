@@ -7,7 +7,7 @@ target 'EziParts_Task' do
 
   # Pods for EziParts_Task
   pod 'SDWebImage'
-  pod 'Cosmos', '~> 22.1'
+  pod 'Cosmos'
   pod 'Alamofire', '~> 5.2'
   pod 'CarbonKit'
 
