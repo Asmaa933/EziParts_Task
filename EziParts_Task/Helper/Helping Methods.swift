@@ -23,4 +23,9 @@ func removeActivityIndicator(activityIndicator: UIActivityIndicatorView){
     activityIndicator.removeFromSuperview()
     
 }
-
+func showAlert(_ message: String) -> UIAlertController{
+    let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+    alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+    return alert
+    
+}

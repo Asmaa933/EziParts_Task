@@ -22,7 +22,7 @@ class DetailsViewModel{
         }
     }
     
-    var errorMessage: String?{
+    var alertMessage: String?{
         didSet{
             showAlertClosure?()
         }
@@ -34,7 +34,7 @@ class DetailsViewModel{
                 self?.supplierDetails = supplier!
             }
         }) {[weak self] (error) in
-            self?.errorMessage = error
+            self?.alertMessage = error
         }
     }
     

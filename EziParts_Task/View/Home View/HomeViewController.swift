@@ -61,8 +61,7 @@ class HomeViewController: UIViewController {
                     if message == "Check Internet Connection"{
                         self?.noInternetImg.isHidden = false
                     }else{ self?.noInternetImg.isHidden = true
-                        self?.showAlert(message)
-                        
+                        self?.present(showAlert(message), animated: true, completion: nil)
                     }
                 }
             }
@@ -97,11 +96,6 @@ class HomeViewController: UIViewController {
         
     }
     
-    private func showAlert(_ message: String){
-        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
     
     @objc private func gestureRecognizer(){
        viewModel.getSuppliers()

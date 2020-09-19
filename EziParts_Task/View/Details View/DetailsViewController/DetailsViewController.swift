@@ -9,14 +9,16 @@
 import UIKit
 import CarbonKit
 import Cosmos
+import SafariServices
+
 
 class DetailsViewController: UIViewController {
     
-    @IBOutlet weak var carbonView: UIView!
-    @IBOutlet weak var logoImg: CircularImage!
-    @IBOutlet weak var companyName: UILabel!
-    @IBOutlet weak var rateView: CosmosView!
-    @IBOutlet weak var shadowView: ShadowedView!
+    @IBOutlet private weak var carbonView: UIView!
+    @IBOutlet private weak var logoImg: CircularImage!
+    @IBOutlet private weak var companyName: UILabel!
+    @IBOutlet private weak var rateView: CosmosView!
+    @IBOutlet private weak var shadowView: ShadowedView!
     
     var supplierSlug: String?
     lazy var viewModel: DetailsViewModel = {
@@ -25,14 +27,18 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCarbonView()
+        setupView()
         initViewModel()
-        rateView.settings.fillMode = .precise
-        shadowView.layer.cornerRadius = 20
-
     }
     
-    func setupCarbonView(){
+    private func setupView(){
+        rateView.settings.fillMode = .precise
+        shadowView.layer.cornerRadius = 20
+        setupCarbonView()
+        
+    }
+    
+    private func setupCarbonView(){
         let items = ["Info", "Reviews"]
         let carbonTabSwipeNavigation = CarbonTabSwipeNavigation(items: items, delegate: self)
         carbonTabSwipeNavigation.setNormalColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), font:(UIFont(name: "Poppins-Medium", size: 15)) ?? UIFont())
@@ -54,13 +60,20 @@ class DetailsViewController: UIViewController {
                 self.companyName.text = details.companyName
                 self.logoImg.sd_setImage(with: URL(string: details.logo ?? "") , placeholderImage: #imageLiteral(resourceName: "logo"), completed: nil)
                 self.rateView.rating = (Double(details.reviewsAvg ?? "") ?? 0) / 2
-                
-                
             }
         }
-        
-        
-        
+           viewModel.showAlertClosure = { [weak self] () in
+                DispatchQueue.main.async {
+                    if let message = self?.viewModel.alertMessage {
+                        if message == "Check Internet Connection"{
+                          //  self?.noInternetImg.isHidden = false
+                        }else{
+                            //self?.noInternetImg.isHidden = true
+                            self?.present(showAlert(message), animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
         
         viewModel.getSupplierDetails(slug: supplierSlug ?? "")
         
@@ -74,24 +87,36 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func socialMediaButtonsPressed(_ sender: UIButton) {
-        
-        
+        var linkURL = ""
+        switch sender.tag {
+        case 0: //facebook
+            linkURL = viewModel.supplierDetails?.results?.facebook ?? ""
+        case 1: // Instagram
+            linkURL = viewModel.supplierDetails?.results?.instagram ?? ""
+        case 2: //Twitter
+            linkURL = viewModel.supplierDetails?.results?.twitter ?? ""
+        default:
+            break
+        }
+        if linkURL.lowercased().hasPrefix("http://")==false{
+            linkURL = "http://" + linkURL
+        }
+        guard let url = URL(string: linkURL) else { return }
+        let svc = SFSafariViewController(url: url)
+        svc.modalPresentationStyle = .popover
+        present(svc, animated: true, completion: nil)
     }
 }
 
 extension DetailsViewController: CarbonTabSwipeNavigationDelegate{
     
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
-        
-        print("xXx: \(index)")
         switch index {
         case 0:
             return InfoViewController()
             
         case 1:
-            let reviewController = ReviewsViewController(nibName: "ReviewsViewController", bundle: nil)
-            
-            return reviewController
+            return ReviewsViewController()
             
         default:
             return InfoViewController()

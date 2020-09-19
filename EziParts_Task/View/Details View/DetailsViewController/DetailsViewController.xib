@@ -62,7 +62,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpQ-Zm-BNr" customClass="ShadowedView" customModule="EziParts" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="174" width="414" height="688"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cjx-dF-FWO" customClass="CircularImage" customModule="EziParts" customModuleProvider="target">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="cjx-dF-FWO" customClass="CircularImage" customModule="EziParts" customModuleProvider="target">
                             <rect key="frame" x="167" y="-30" width="80" height="80"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -113,14 +113,14 @@
                                         <action selector="socialMediaButtonsPressed:" destination="-1" eventType="touchUpInside" id="lQA-XO-khj"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-Dn-Zud">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-Dn-Zud">
                                     <rect key="frame" x="33" y="0.0" width="25" height="25"/>
                                     <state key="normal" image="instagram"/>
                                     <connections>
                                         <action selector="socialMediaButtonsPressed:" destination="-1" eventType="touchUpInside" id="3mc-JE-lbo"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0s-sP-Tem">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0s-sP-Tem">
                                     <rect key="frame" x="66" y="0.0" width="25" height="25"/>
                                     <state key="normal" image="twitter"/>
                                     <connections>
