@@ -60,6 +60,8 @@ class DetailsViewController: UIViewController {
             guard let self = self else {return}
             guard let details = self.viewModel.supplierDetails?.results else {return}
             self.infoVC.infoDetails = details
+            guard let reviews = self.viewModel.supplierDetails?.results?.reviews else {return}
+            self.reviewVC.reviews = reviews
             DispatchQueue.main.async {
                 self.companyName.text = details.companyName
                 self.logoImg.sd_setImage(with: URL(string: details.logo ?? "") , placeholderImage: #imageLiteral(resourceName: "logo"), completed: nil)

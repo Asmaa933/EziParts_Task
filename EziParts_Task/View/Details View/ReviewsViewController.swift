@@ -9,11 +9,9 @@ import UIKit
 
 class ReviewsViewController: UIViewController {
     
-    @IBOutlet var tableView: UITableView!
     
-    lazy var viewModel: DetailsViewModel = {
-        return DetailsViewModel()
-    }()
+    @IBOutlet weak var tableView: UITableView!
+    var reviews:[Review]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +29,12 @@ class ReviewsViewController: UIViewController {
 }
 extension ReviewsViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return reviews?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath) as? ReviewCell else {return UITableViewCell()}
-        
+        cell.review = reviews?[indexPath.row]
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

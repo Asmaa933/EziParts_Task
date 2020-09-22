@@ -19,12 +19,15 @@ class ReviewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+    
+    var review: Review?{
+        didSet{
+            dateLbl.text = review?.createdAt
+            rateView.rating = (Double(review?.rating ?? "") ?? 0)
+            reviewDetails.text = review?.details
+        }
     }
     
 }
