@@ -29,7 +29,14 @@ class ReviewsViewController: UIViewController {
 }
 extension ReviewsViewController: UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return reviews?.count ?? 0
+        
+        let count = reviews?.count ?? 0
+             if count == 0{
+                 tableView.setEmptyView(title: "", message: "No Reviews Found", messageImage: #imageLiteral(resourceName: "close"))
+             }else{
+                 tableView.restore()
+             }
+             return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

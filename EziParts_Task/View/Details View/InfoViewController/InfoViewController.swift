@@ -28,12 +28,12 @@ class InfoViewController: UIViewController {
         setupView()
     }
     private func setupView(){
-        aboutUSLbl.font = UIFont(name: "Poppins-Regular", size: 15)
-        aboutTextView.font = UIFont(name: "Poppins-Regular", size: 12)
-        contactUsLbl.font = UIFont(name: "Poppins-Regular", size: 15)
-        locationLbl.font = UIFont(name: "Poppins-Regular", size: 12)
-        phoneLbl.font = UIFont(name: "Poppins-Regular", size: 12)
-        emailLbl.font = UIFont(name: "Poppins-Regular", size: 12)
+        aboutUSLbl.font = UIFont(name: "Poppins-Regular", size: 16)
+        aboutTextView.font = UIFont(name: "Poppins-Regular", size: 15)
+        contactUsLbl.font = UIFont(name: "Poppins-Regular", size: 16)
+        locationLbl.font = UIFont(name: "Poppins-Regular", size: 15)
+        phoneLbl.font = UIFont(name: "Poppins-Regular", size: 14)
+        emailLbl.font = UIFont(name: "Poppins-Regular", size: 14)
         
         
     }
