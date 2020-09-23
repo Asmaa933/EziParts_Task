@@ -24,14 +24,14 @@ class DetailsViewController: UIViewController {
     lazy var viewModel: DetailsViewModel = {
         return DetailsViewModel()
     }()
-     var infoVC = InfoViewController()
-     var reviewVC = ReviewsViewController()
+    var infoVC = InfoViewController()
+    var reviewVC = ReviewsViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         initViewModel()
-
+        
     }
     
     private func setupView(){
@@ -68,18 +68,18 @@ class DetailsViewController: UIViewController {
                 self.rateView.rating = (Double(details.reviewsAvg ?? "") ?? 0) / 2
             }
         }
-           viewModel.showAlertClosure = { [weak self] () in
-                DispatchQueue.main.async {
-                    if let message = self?.viewModel.alertMessage {
-                        if message == "Check Internet Connection"{
-                          //  self?.noInternetImg.isHidden = false
-                        }else{
-                            //self?.noInternetImg.isHidden = true
-                            self?.present(showAlert(message), animated: true, completion: nil)
-                        }
+        viewModel.showAlertClosure = { [weak self] () in
+            DispatchQueue.main.async {
+                if let message = self?.viewModel.alertMessage {
+                    if message == "Check Internet Connection"{
+                        //  self?.noInternetImg.isHidden = false
+                    }else{
+                        //self?.noInternetImg.isHidden = true
+                        self?.present(showAlert(message), animated: true, completion: nil)
                     }
                 }
             }
+        }
         
         viewModel.getSupplierDetails(slug: supplierSlug ?? "")
         

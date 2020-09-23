@@ -91,8 +91,8 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="4zl-hs-v4S">
-                                    <rect key="frame" x="10" y="292" width="396" height="168"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4zl-hs-v4S">
+                                    <rect key="frame" x="10" y="292" width="396" height="165.5"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -102,6 +102,7 @@
                                 <constraint firstItem="kHu-z3-YXO" firstAttribute="top" secondItem="k8O-cP-rl8" secondAttribute="top" id="6jd-9L-ONX"/>
                                 <constraint firstItem="SkZ-9S-hog" firstAttribute="leading" secondItem="ojU-nx-mBs" secondAttribute="trailing" constant="8" id="8rG-pA-CA6"/>
                                 <constraint firstItem="SkZ-9S-hog" firstAttribute="width" secondItem="k8O-cP-rl8" secondAttribute="width" multiplier="0.85" id="9vJ-Kn-erL"/>
+                                <constraint firstItem="4zl-hs-v4S" firstAttribute="height" secondItem="k8O-cP-rl8" secondAttribute="width" multiplier="0.4" id="AbE-AN-gzi"/>
                                 <constraint firstItem="4zl-hs-v4S" firstAttribute="top" secondItem="1D5-S8-Ft4" secondAttribute="bottom" constant="15" id="Cbf-Nv-lix"/>
                                 <constraint firstItem="kHu-z3-YXO" firstAttribute="width" secondItem="k8O-cP-rl8" secondAttribute="width" id="F8u-ov-Vii"/>
                                 <constraint firstItem="Mrk-of-2rr" firstAttribute="top" secondItem="kHu-z3-YXO" secondAttribute="bottom" constant="15" id="LF7-W9-Uij"/>
@@ -146,7 +147,6 @@
         </view>
     </objects>
     <resources>
-        <image name="background" width="375" height="168"/>
         <image name="location" width="25" height="25"/>
         <image name="message" width="25" height="25"/>
         <image name="phone" width="25" height="25"/>

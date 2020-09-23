@@ -11,11 +11,11 @@ import Foundation
 class DetailsViewModel{
     private let apiService: SupplierDetailsApiHandlerProtocol
     var updateUIClosure: (()->())?
-       var showAlertClosure: (()->())?
-       var updateLoadingStatus: (()->())?
+    var showAlertClosure: (()->())?
+    var updateLoadingStatus: (()->())?
     init(apiService: SupplierDetailsApiHandlerProtocol = SupplierDetailsApiHandler()) {
-         self.apiService = apiService
-     }
+        self.apiService = apiService
+    }
     var supplierDetails: SupplierDetails?{
         didSet{
             updateUIClosure?()

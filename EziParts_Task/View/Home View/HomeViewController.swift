@@ -26,17 +26,17 @@ class HomeViewController: UIViewController {
         initVM()
     }
     
-   private func setupView() {
+    private func setupView() {
         setupTableView()
         resultCount.isHidden = true
         noInternetImg.isHidden = true
-    searchBar.delegate = self
+        searchBar.delegate = self
         let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(HomeViewController.gestureRecognizer))
         downSwipe.direction = UISwipeGestureRecognizer.Direction.down
         self.view.addGestureRecognizer(downSwipe)
     }
     
-   private func setupTableView(){
+    private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
         tableView.isHidden = true
@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
     }
     
-   private func initVM(){
+    private func initVM(){
         
         viewModel.updateUIClosure = { [weak self] () in
             guard let self = self else {return}
@@ -92,14 +92,11 @@ class HomeViewController: UIViewController {
                 }
             }
         }
-        
         viewModel.getSuppliers()
-        
     }
     
-    
     @objc private func gestureRecognizer(){
-       viewModel.getSuppliers()
+        viewModel.getSuppliers()
     }
 }
 
@@ -123,7 +120,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let detail = DetailsViewController()
+        let detail = DetailsViewController()
         tableView.deselectRow(at: indexPath, animated: false)
         detail.modalPresentationStyle = .fullScreen
         let supplier = viewModel.getSupplierData(indexPath: indexPath)

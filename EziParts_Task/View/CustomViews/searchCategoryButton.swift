@@ -9,8 +9,8 @@
 import UIKit
 
 class searchCategoryButton: UIButton {
-
-     override func awakeFromNib() {
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
         setupview()
     }

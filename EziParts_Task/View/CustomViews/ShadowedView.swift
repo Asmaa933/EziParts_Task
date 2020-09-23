@@ -22,8 +22,6 @@ class ShadowedView: UIView {
         self.layer.shadowRadius = 2
         self.layer.masksToBounds = false
         
-        
-        
     }
     override func prepareForInterfaceBuilder() {
         setupview()
