@@ -15,12 +15,18 @@ class HomeViewModel{
     var showAlertClosure: (()->())?
     var updateLoadingStatus: (()->())?
     
+    private var filteredArr: [Result]?{
+        didSet{
+            self.updateUIClosure?()
+        }
+    }
     private var suppliers: SuppliersModel?{
         didSet{
             self.updateUIClosure?()
         }
     }
     
+    var isFiltered = false
     var alertMessage: String? {
         didSet {
             self.showAlertClosure?()
@@ -59,11 +65,23 @@ class HomeViewModel{
     }
     
     func getSuppliersArrCount() -> Int?{
-        return suppliers?.results.count
+        
+        return !isFiltered ? suppliers?.results.count: filteredArr?.count
     }
     
     func getSupplierData(indexPath: IndexPath) -> Result?{
-        return suppliers?.results[indexPath.row]
+        return !isFiltered ? suppliers?.results[indexPath.row] : filteredArr?[indexPath.row]
     }
     
+    func searchInArray(searchTxt: String){
+        filteredArr = [Result]()
+        if (searchTxt.isEmpty){
+            isFiltered = false
+        }else{
+            isFiltered = true
+            filteredArr = suppliers?.results.filter {
+                return $0.companyName.range(of: searchTxt, options: .caseInsensitive) != nil
+            }
+        }
+    }
 }

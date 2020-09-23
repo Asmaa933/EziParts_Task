@@ -10,7 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var noInternetImg: UIImageView!
+    @IBOutlet private weak var noInternetImg: UIImageView!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var resultCount: UILabel!
@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
         setupTableView()
         resultCount.isHidden = true
         noInternetImg.isHidden = true
+    searchBar.delegate = self
         let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(HomeViewController.gestureRecognizer))
         downSwipe.direction = UISwipeGestureRecognizer.Direction.down
         self.view.addGestureRecognizer(downSwipe)
@@ -107,7 +108,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = viewModel.getSuppliersArrCount() ?? 0
         if count == 0{
-            tableView.setEmptyView(title: "", message: "No Suppliers Found", messageImage: #imageLiteral(resourceName: "close"))
+            tableView.setEmptyView(title: "", message: "No Suppliers Found", messageImage: #imageLiteral(resourceName: "not_found"))
         }else{
             tableView.restore()
         }
@@ -123,6 +124,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       let detail = DetailsViewController()
+        tableView.deselectRow(at: indexPath, animated: false)
         detail.modalPresentationStyle = .fullScreen
         let supplier = viewModel.getSupplierData(indexPath: indexPath)
         detail.supplierSlug = supplier?.slug
@@ -132,7 +134,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
-    
-    
+}
+
+extension HomeViewController: UISearchBarDelegate{
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        viewModel.isFiltered = false
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.searchInArray(searchTxt: searchBar.text?.trimmingCharacters(in: .whitespaces) ?? "")
+        
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        tableView.reloadData()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        tableView.resignFirstResponder()
+        
+    }
 }
