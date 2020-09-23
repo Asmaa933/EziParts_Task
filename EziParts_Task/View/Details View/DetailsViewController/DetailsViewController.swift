@@ -24,8 +24,8 @@ class DetailsViewController: UIViewController {
     lazy var viewModel: DetailsViewModel = {
         return DetailsViewModel()
     }()
-    var infoVC = InfoViewController()
-    var reviewVC = ReviewsViewController()
+    private var infoVC = InfoViewController()
+    private var reviewVC = ReviewsViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class DetailsViewController: UIViewController {
         carbonTabSwipeNavigation.carbonSegmentedControl?.apportionsSegmentWidthsByContent = false
     }
     
-    func initViewModel(){
+    private func initViewModel(){
         viewModel.updateUIClosure = { [weak self] () in
             guard let self = self else {return}
             guard let details = self.viewModel.supplierDetails?.results else {return}
@@ -85,11 +85,11 @@ class DetailsViewController: UIViewController {
         
     }
     
-    @IBAction func closeButtonPressed(_ sender: UIButton) {
+    @IBAction private func closeButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func socialMediaButtonsPressed(_ sender: UIButton) {
+    @IBAction private func socialMediaButtonsPressed(_ sender: UIButton) {
         var linkURL = ""
         switch sender.tag {
         case 0: //facebook

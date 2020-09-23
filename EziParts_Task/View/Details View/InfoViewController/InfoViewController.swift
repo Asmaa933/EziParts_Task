@@ -27,6 +27,7 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         setupView()
     }
+    
     private func setupView(){
         aboutUSLbl.font = UIFont(name: "Poppins-Regular", size: 16)
         aboutTextView.font = UIFont(name: "Poppins-Regular", size: 15)
@@ -45,12 +46,7 @@ class InfoViewController: UIViewController {
         self.emailLbl.text = infoDetails.companyEmail
         guard let lat = infoDetails.location?.first?.lat else {return}
         guard let lang = infoDetails.location?.first?.lng else {return}
-        
-        
-        
-        
         let url = "https://maps.googleapis.com/maps/api/staticmap?center=\(lat),\(lang)&zoom=6&size=400x160&markers=color:0x01737E%7C%7C\(lat),\(lang)&key=AIzaSyCAg3MSLbUKNq7bGtjciTuxMPUVmEbJMO0"
-        
         self.mapImage.sd_setImage(with: URL(string: url), completed: nil)
     }
     

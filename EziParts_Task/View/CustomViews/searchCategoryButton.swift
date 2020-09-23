@@ -14,6 +14,7 @@ class searchCategoryButton: UIButton {
         super.awakeFromNib()
         setupview()
     }
+    
     private func setupview(){
         self.titleLabel?.font = UIFont(name: "Poppins-Regular", size: 12)
         self.titleLabel?.textColor = #colorLiteral(red: 0.631372549, green: 0.662745098, blue: 0.7647058824, alpha: 1)
@@ -22,6 +23,7 @@ class searchCategoryButton: UIButton {
         self.clipsToBounds = true
         
     }
+    
     override func prepareForInterfaceBuilder() {
         setupview()
     }

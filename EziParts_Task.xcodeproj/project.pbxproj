@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A002C2FFA9DFB12F8B8D51F /* Pods_EziParts_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA7BB5934F978334745E53DB /* Pods_EziParts_Task.framework */; };
+		766B3E70251AEA9400182301 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766B3E6E251AEA9300182301 /* ReviewsViewController.swift */; };
+		766B3E71251AEA9400182301 /* ReviewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 766B3E6F251AEA9400182301 /* ReviewsViewController.xib */; };
 		7678F1D3251481A600A1D9B2 /* SuppliersApiHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678F1D2251481A600A1D9B2 /* SuppliersApiHandler.swift */; };
 		7678F1D5251482E000A1D9B2 /* SuppliersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678F1D4251482E000A1D9B2 /* SuppliersModel.swift */; };
 		7678F1D72514890D00A1D9B2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7678F1D62514890D00A1D9B2 /* HomeViewModel.swift */; };
@@ -18,7 +20,6 @@
 		76B4FB362515732E000EEE4F /* SupplierDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4FB352515732E000EEE4F /* SupplierDetailsModel.swift */; };
 		76B4FB39251577E3000EEE4F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4FB37251577E3000EEE4F /* InfoViewController.swift */; };
 		76B4FB3A251577E3000EEE4F /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B4FB38251577E3000EEE4F /* InfoViewController.xib */; };
-		76B4FB3D251577F6000EEE4F /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4FB3B251577F6000EEE4F /* ReviewsViewController.swift */; };
 		76B4FB4425158648000EEE4F /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4FB4225158648000EEE4F /* ReviewCell.swift */; };
 		76B4FB4525158648000EEE4F /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B4FB4325158648000EEE4F /* ReviewCell.xib */; };
 		76B6FF4A25145DCB00BFEACD /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B6FF4825145DCB00BFEACD /* HomeCell.swift */; };
@@ -36,7 +37,6 @@
 		76C8ECB3251401EC008CB27A /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76C8ECB1251401EC008CB27A /* Poppins-Medium.ttf */; };
 		76C8ECB625140257008CB27A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C8ECB425140257008CB27A /* HomeViewController.swift */; };
 		76C8ECB725140257008CB27A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C8ECB525140257008CB27A /* HomeViewController.xib */; };
-		76F64DB32515925D0023101F /* ReviewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B4FB3C251577F6000EEE4F /* ReviewsViewController.xib */; };
 		76FF32CB2515602400EB57FE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF32C92515602400EB57FE /* DetailsViewController.swift */; };
 		76FF32CC2515602400EB57FE /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76FF32CA2515602400EB57FE /* DetailsViewController.xib */; };
 		76FF32D02515606900EB57FE /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FF32CF2515606900EB57FE /* DetailsViewModel.swift */; };
@@ -44,18 +44,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		766B3E6E251AEA9300182301 /* ReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		766B3E6F251AEA9400182301 /* ReviewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewsViewController.xib; sourceTree = "<group>"; };
 		7678F1D2251481A600A1D9B2 /* SuppliersApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuppliersApiHandler.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Network/SuppliersApiHandler.swift; sourceTree = "<group>"; };
 		7678F1D4251482E000A1D9B2 /* SuppliersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SuppliersModel.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Model/SuppliersModel.swift; sourceTree = "<group>"; };
 		7678F1D62514890D00A1D9B2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		7678F1D92514921200A1D9B2 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EmptyTableView.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Helper/EmptyTableView.swift; sourceTree = "<group>"; };
+		7678F1D92514921200A1D9B2 /* EmptyTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableView.swift; sourceTree = "<group>"; };
 		767F8E6325144D8E001AF6A1 /* ShadowedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowedButton.swift; path = ../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/CustomViews/ShadowedButton.swift; sourceTree = "<group>"; };
 		767F8E6525145437001AF6A1 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShadowedView.swift; path = ../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/CustomViews/ShadowedView.swift; sourceTree = "<group>"; };
 		76B4FB332515725A000EEE4F /* SupplierDetailsApiHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SupplierDetailsApiHandler.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Network/SupplierDetailsApiHandler.swift; sourceTree = "<group>"; };
 		76B4FB352515732E000EEE4F /* SupplierDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SupplierDetailsModel.swift; path = ../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/Model/SupplierDetailsModel.swift; sourceTree = "<group>"; };
 		76B4FB37251577E3000EEE4F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		76B4FB38251577E3000EEE4F /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
-		76B4FB3B251577F6000EEE4F /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewsViewController.swift; path = "/Users/EsMa/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Details View/ReviewsViewController.swift"; sourceTree = "<absolute>"; };
-		76B4FB3C251577F6000EEE4F /* ReviewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ReviewsViewController.xib; path = "/Users/EsMa/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Details View/ReviewsViewController.xib"; sourceTree = "<absolute>"; };
 		76B4FB4225158648000EEE4F /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewCell.swift; path = "../../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Details View/ReviewsViewController/ReviewCell.swift"; sourceTree = "<group>"; };
 		76B4FB4325158648000EEE4F /* ReviewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ReviewCell.xib; path = "../../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Details View/ReviewsViewController/ReviewCell.xib"; sourceTree = "<group>"; };
 		76B6FF4825145DCB00BFEACD /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = "../../../../../../../esma/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Home View/HomeCell.swift"; sourceTree = "<group>"; };
@@ -96,10 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7678F1D82514920100A1D9B2 /* Helper */ = {
+		766B3E72251B030500182301 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				7678F1D92514921200A1D9B2 /* EmptyTableView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7678F1D82514920100A1D9B2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				766B3E72251B030500182301 /* Extensions */,
 				76C4C7B82515442B00788E98 /* Helping Methods.swift */,
 				76C4C7BC25154C9A00788E98 /* Constants.swift */,
 			);
@@ -127,8 +135,8 @@
 		76B4FB4125158622000EEE4F /* ReviewsViewController */ = {
 			isa = PBXGroup;
 			children = (
-				76B4FB3B251577F6000EEE4F /* ReviewsViewController.swift */,
-				76B4FB3C251577F6000EEE4F /* ReviewsViewController.xib */,
+				766B3E6E251AEA9300182301 /* ReviewsViewController.swift */,
+				766B3E6F251AEA9400182301 /* ReviewsViewController.xib */,
 				76B4FB4225158648000EEE4F /* ReviewCell.swift */,
 				76B4FB4325158648000EEE4F /* ReviewCell.xib */,
 			);
@@ -353,7 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B6FF4B25145DCB00BFEACD /* HomeCell.xib in Resources */,
-				76F64DB32515925D0023101F /* ReviewsViewController.xib in Resources */,
+				766B3E71251AEA9400182301 /* ReviewsViewController.xib in Resources */,
 				76B4FB4525158648000EEE4F /* ReviewCell.xib in Resources */,
 				76B4FB3A251577E3000EEE4F /* InfoViewController.xib in Resources */,
 				76C8EC9E2513FD23008CB27A /* LaunchScreen.storyboard in Resources */,
@@ -419,7 +427,6 @@
 				76C8EC922513FD21008CB27A /* AppDelegate.swift in Sources */,
 				7678F1D72514890D00A1D9B2 /* HomeViewModel.swift in Sources */,
 				76FF32D02515606900EB57FE /* DetailsViewModel.swift in Sources */,
-				76B4FB3D251577F6000EEE4F /* ReviewsViewController.swift in Sources */,
 				76C4C7B92515442B00788E98 /* Helping Methods.swift in Sources */,
 				76FF32D32515663500EB57FE /* CircularImage.swift in Sources */,
 				76B4FB362515732E000EEE4F /* SupplierDetailsModel.swift in Sources */,
@@ -434,6 +441,7 @@
 				76B6FF4A25145DCB00BFEACD /* HomeCell.swift in Sources */,
 				767F8E6625145437001AF6A1 /* ShadowedView.swift in Sources */,
 				7678F1D3251481A600A1D9B2 /* SuppliersApiHandler.swift in Sources */,
+				766B3E70251AEA9400182301 /* ReviewsViewController.swift in Sources */,
 				7678F1D5251482E000A1D9B2 /* SuppliersModel.swift in Sources */,
 				76FF32CB2515602400EB57FE /* DetailsViewController.swift in Sources */,
 				76B4FB4425158648000EEE4F /* ReviewCell.swift in Sources */,

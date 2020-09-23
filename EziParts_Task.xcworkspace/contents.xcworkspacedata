@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/EsMa/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Details View/ReviewsViewController.swift">
-   </FileRef>
-   <FileRef
-      location = "group:/Users/EsMa/Desktop/PROJECTS/EziParts_Task/EziParts_Task/View/Details View/ReviewsViewController.xib">
-   </FileRef>
-   <FileRef
       location = "group:EziParts_Task.xcodeproj">
    </FileRef>
    <FileRef

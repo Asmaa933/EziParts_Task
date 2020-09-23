@@ -65,7 +65,6 @@ class HomeViewModel{
     }
     
     func getSuppliersArrCount() -> Int?{
-        
         return !isFiltered ? suppliers?.results.count: filteredArr?.count
     }
     

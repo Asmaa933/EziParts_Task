@@ -37,6 +37,4 @@ class DetailsViewModel{
             self?.alertMessage = error
         }
     }
-    
-    
 }
