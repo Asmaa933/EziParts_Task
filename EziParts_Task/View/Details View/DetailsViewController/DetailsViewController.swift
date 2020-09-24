@@ -20,6 +20,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet private weak var rateView: CosmosView!
     @IBOutlet private weak var shadowView: ShadowedView!
     
+    private var activityInd = UIActivityIndicatorView()
+    
     var supplierSlug: String?
     lazy var viewModel: DetailsViewModel = {
         return DetailsViewModel()
@@ -63,24 +65,23 @@ class DetailsViewController: UIViewController {
             guard let reviews = self.viewModel.supplierDetails?.results?.reviews else {return}
             self.reviewVC.reviews = reviews
             DispatchQueue.main.async {
+                removeActivityIndicator(activityIndicator: self.activityInd)
                 self.companyName.text = details.companyName
                 self.logoImg.sd_setImage(with: URL(string: details.logo ?? "") , placeholderImage: #imageLiteral(resourceName: "logo"), completed: nil)
                 self.rateView.rating = (Double(details.reviewsAvg ?? "") ?? 0) / 2
             }
         }
         viewModel.showAlertClosure = { [weak self] () in
+            guard let self = self else { return }
             DispatchQueue.main.async {
-                if let message = self?.viewModel.alertMessage {
-                    if message == "Check Internet Connection"{
-                        //  self?.noInternetImg.isHidden = false
-                    }else{
-                        //self?.noInternetImg.isHidden = true
-                        self?.present(showAlert(message), animated: true, completion: nil)
-                    }
+                removeActivityIndicator(activityIndicator: self.activityInd)
+                if let message = self.viewModel.alertMessage {
+                    self.present(showAlert(message), animated: true, completion: nil)
                 }
             }
         }
         
+        activityInd = showActivityIndicator(view: self.view)
         viewModel.getSupplierDetails(slug: supplierSlug ?? "")
         
     }

@@ -11,7 +11,7 @@ import UIKit
 
 func showActivityIndicator(view: UIView) -> UIActivityIndicatorView{
     let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
-    activityIndicator.color = #colorLiteral(red: 0.1647058824, green: 0.168627451, blue: 0.2901960784, alpha: 0.8474154538)
+    activityIndicator.color = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     activityIndicator.center = view.center
     activityIndicator.startAnimating()
     view.addSubview(activityIndicator)
