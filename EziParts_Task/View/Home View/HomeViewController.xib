@@ -58,7 +58,7 @@
                             <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                         </textField>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ltR-we-caP">
-                            <rect key="frame" x="20" y="95" width="335" height="30"/>
+                            <rect key="frame" x="20" y="90" width="335" height="30"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gVf-lF-dk2">
                                 <size key="itemSize" width="128" height="128"/>
@@ -85,7 +85,7 @@
                         <constraint firstItem="QTR-et-huF" firstAttribute="leading" secondItem="KrR-3Y-ndp" secondAttribute="leading" constant="20" id="oLl-ZE-tCb"/>
                         <constraint firstItem="l1r-7K-ONf" firstAttribute="centerY" secondItem="6FV-Ti-eMs" secondAttribute="centerY" id="qQD-pg-obT"/>
                         <constraint firstItem="LUf-CB-rrt" firstAttribute="centerY" secondItem="6FV-Ti-eMs" secondAttribute="centerY" id="s0g-1T-xpW"/>
-                        <constraint firstItem="ltR-we-caP" firstAttribute="top" secondItem="QTR-et-huF" secondAttribute="bottom" constant="20" id="u0M-2f-nhp"/>
+                        <constraint firstItem="ltR-we-caP" firstAttribute="top" secondItem="QTR-et-huF" secondAttribute="bottom" constant="15" id="u0M-2f-nhp"/>
                         <constraint firstItem="LUf-CB-rrt" firstAttribute="leading" secondItem="QTR-et-huF" secondAttribute="trailing" constant="10" id="u60-Gn-96F"/>
                         <constraint firstItem="6FV-Ti-eMs" firstAttribute="leading" secondItem="QTR-et-huF" secondAttribute="trailing" id="weu-Jf-niy"/>
                         <constraint firstItem="6FV-Ti-eMs" firstAttribute="height" secondItem="KrR-3Y-ndp" secondAttribute="width" multiplier="0.1" id="zzz-gd-HRK"/>
