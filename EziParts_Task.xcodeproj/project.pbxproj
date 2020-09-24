@@ -238,10 +238,10 @@
 		76C8ECB82514025E008CB27A /* Home View */ = {
 			isa = PBXGroup;
 			children = (
-				3ECC9F2F251B1D3600264318 /* HomeCell.swift */,
-				3ECC9F2E251B1D3600264318 /* HomeCell.xib */,
 				76C8ECB425140257008CB27A /* HomeViewController.swift */,
 				76C8ECB525140257008CB27A /* HomeViewController.xib */,
+				3ECC9F2F251B1D3600264318 /* HomeCell.swift */,
+				3ECC9F2E251B1D3600264318 /* HomeCell.xib */,
 			);
 			path = "Home View";
 			sourceTree = "<group>";

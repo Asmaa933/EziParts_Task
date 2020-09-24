@@ -26,7 +26,11 @@ class HomeViewModel{
         }
     }
     
-    var isFiltered = false
+    var isFiltered = false{
+        didSet{
+            self.updateUIClosure?()
+        }
+    }
     var alertMessage: String? {
         didSet {
             self.showAlertClosure?()

@@ -10,9 +10,11 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchView: ShadowedView!
     @IBOutlet private weak var noInternetImg: UIImageView!
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var searchBar: UISearchBar!
+   // @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var resultCount: UILabel!
     
     private  var activityInd = UIActivityIndicatorView ()
@@ -30,10 +32,18 @@ class HomeViewController: UIViewController {
         setupTableView()
         resultCount.isHidden = true
         noInternetImg.isHidden = true
-        searchBar.delegate = self
+        searchView.layer.cornerRadius = 10
+        searchTextField.addTarget(self, action: #selector(searchInSuppliers), for: .editingChanged)
         let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(HomeViewController.gestureRecognizer))
         downSwipe.direction = UISwipeGestureRecognizer.Direction.down
         self.view.addGestureRecognizer(downSwipe)
+    }
+    @objc private func searchInSuppliers(){
+        if searchTextField.text?.isEmpty ?? false{
+                   viewModel.isFiltered = false
+               }else{
+                    viewModel.searchInArray(searchTxt: searchTextField.text?.trimmingCharacters(in: .whitespaces) ?? "")
+               }
     }
     
     private func setupTableView(){
@@ -133,19 +143,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
 }
 
-extension HomeViewController: UISearchBarDelegate{
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        viewModel.isFiltered = false
-    }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        viewModel.searchInArray(searchTxt: searchBar.text?.trimmingCharacters(in: .whitespaces) ?? "")
-        
-    }
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        tableView.reloadData()
-    }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        tableView.resignFirstResponder()
-        
-    }
-}
+//extension HomeViewController: UISearchBarDelegate{
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+//        viewModel.isFiltered = false
+//    }
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        viewModel.searchInArray(searchTxt: searchBar.text?.trimmingCharacters(in: .whitespaces) ?? "")
+//        
+//    }
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        tableView.reloadData()
+//    }
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        tableView.resignFirstResponder()
+//        
+//    }
+//}
