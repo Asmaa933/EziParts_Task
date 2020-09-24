@@ -41,6 +41,7 @@ class HomeViewModel{
             self.updateLoadingStatus?()
         }
     }
+    private let categories = ["Area","Condition","Maker","Color"]
     
     init(apiService: SuppliersApiHandlerProtocol = SuppliersApiHandler()) {
         self.apiService = apiService
@@ -86,5 +87,13 @@ class HomeViewModel{
                 return $0.companyName.range(of: searchTxt, options: .caseInsensitive) != nil
             }
         }
+    }
+    
+    func getCategoriesArrCount() -> Int{
+        return categories.count
+    }
+    
+    func getCategory(indexpath: IndexPath) -> String{
+        return categories[indexpath.row]
     }
 }
