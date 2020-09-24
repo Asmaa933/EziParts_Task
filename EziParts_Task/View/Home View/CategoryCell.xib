@@ -11,31 +11,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoryCell" customModule="EziParts" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="70" height="46"/>
+            <rect key="frame" x="0.0" y="0.0" width="50" height="41"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="70" height="46"/>
+                <rect key="frame" x="0.0" y="0.0" width="50" height="41"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-zu-nEl" customClass="searchCategoryButton" customModule="EziParts" customModuleProvider="target">
-                        <rect key="frame" x="4" y="8" width="62" height="30"/>
-                        <state key="normal" title="Area"/>
-                    </button>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQv-HW-cON">
+                        <rect key="frame" x="5" y="5" width="40" height="31"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-zu-nEl">
+                                <rect key="frame" x="0.0" y="0.5" width="40" height="30"/>
+                                <state key="normal" title="Area"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dOj-zu-nEl" firstAttribute="width" secondItem="vQv-HW-cON" secondAttribute="width" id="F0E-JF-bwl"/>
+                            <constraint firstItem="dOj-zu-nEl" firstAttribute="leading" secondItem="vQv-HW-cON" secondAttribute="leading" id="SxL-qI-JDG"/>
+                            <constraint firstItem="dOj-zu-nEl" firstAttribute="centerY" secondItem="vQv-HW-cON" secondAttribute="centerY" id="a3z-KX-Phb"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="dOj-zu-nEl" secondAttribute="trailing" constant="4" id="C9T-pm-Nph"/>
-                <constraint firstAttribute="bottom" secondItem="dOj-zu-nEl" secondAttribute="bottom" constant="8" id="KF2-y1-LgZ"/>
-                <constraint firstItem="dOj-zu-nEl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="4" id="SPx-2v-fZT"/>
-                <constraint firstItem="dOj-zu-nEl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="uXZ-WO-Fe6"/>
+                <constraint firstAttribute="trailing" secondItem="vQv-HW-cON" secondAttribute="trailing" constant="5" id="98o-0b-IwP"/>
+                <constraint firstItem="vQv-HW-cON" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="9K7-du-69m"/>
+                <constraint firstAttribute="bottom" secondItem="vQv-HW-cON" secondAttribute="bottom" constant="5" id="ZEC-Gw-O4Y"/>
+                <constraint firstItem="vQv-HW-cON" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="ggL-7p-rma"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="70" height="46"/>
+            <size key="customSize" width="70" height="41"/>
             <connections>
-                <outlet property="categoryButton" destination="dOj-zu-nEl" id="8MN-pe-Kw5"/>
+                <outlet property="bgView" destination="vQv-HW-cON" id="WSx-qr-EZt"/>
+                <outlet property="categoryButton" destination="dOj-zu-nEl" id="tFj-ms-28l"/>
             </connections>
-            <point key="canvasLocation" x="162.31884057971016" y="105.13392857142857"/>
+            <point key="canvasLocation" x="162.31884057971016" y="103.45982142857143"/>
         </collectionViewCell>
     </objects>
 </document>
